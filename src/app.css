@@ -1,0 +1,51 @@
+
+.snake-message {
+    color: grey;
+    margin-bottom: 20px;
+}
+
+.progress-loader {
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.progress-loader span {
+    height: 10px;
+    width: 10px;
+    margin: 2px;
+    display: inline-block;
+    border-radius: 50%;
+    animation: wave 1s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.progress-loader span:nth-child(2) {
+  animation-delay: -500ms;
+  background-color: #D2232A;
+}
+
+.progress-loader span:nth-child(3) {
+  animation-delay: -375ms;
+  background-color: #F26D21;
+}
+
+.progress-loader span:nth-child(4) {
+  animation-delay: -250ms;
+  background-color: #F7922A;
+}
+
+.progress-loader span:nth-child(5) {
+  animation-delay: -125ms;
+  background-color: #8AD223;
+}
+
+@keyframes wave {
+  0%, 40%, 100% {
+    transform: translate(0, 0);
+  }
+  80% {
+    transform: translate(0, -22px);
+  }
+}
